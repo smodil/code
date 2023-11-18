@@ -1,0 +1,62 @@
+<h6>main.py</h6>
+<hr>
+<textarea style="height: 700px;width: 375px; background: #101010;color: white;font-family: monospace;font-weight: bold;">
+  # we will use tuetle module to create gui fot our calculator program
+import turtle as gui
+
+#creating a blue coloured window 
+gui.bgcolor("blue");
+
+#creating a infinite loop which will never end
+
+inf = True
+
+while inf == True:
+	
+	#making a popup window for asking value 1 and store the value in val1 variable
+	val1 = gui.numinput("GHGLTGGAMER CALCULATOR - Value input", "Please enter the first value");
+	
+	#similarly getting the 2nd value
+	val2 = gui.numinput("GHGLTGGAMER CALCULATOR - Value input", "Please enter the second value");
+	
+	#getting the arthematic operator by user to compute both values
+	ope = gui.textinput("GHGLTGGAMER CALCULATOR - Operator input", "Please enter the operator to solve the numbers");
+	
+	#python lack's switch case statements so we'll use if else statement to checking the operator
+	
+	# '+'
+	if ope == '+':
+		gui.color("orange")
+		gui.write(val1 + val2)
+		gui.textinput("The answer is ", val1 + val2)
+		
+		# '-'
+	elif ope == '-':
+		gui.color("orange")
+		gui.write(val1 - val2)
+		gui.textinput("The answer is ", val1 - val2)
+		
+		
+		# '*'
+	elif ope == '*':
+		gui.color("orange")
+		gui.write(val1 * val2)
+		gui.textinput("The answer is ", val1 * val2)
+		
+		# '/'
+	elif ope == '/':
+		gui.color("orange")
+		gui.write(val1 / val2)
+		gui.textinput("The answer is ", val1 / val2)
+		
+		# 'r'
+	elif ope == 'r':
+		gui.color("orange")
+		gui.write(val1 % val2)
+		gui.textinput("The answer is ", val1 % val2)
+		
+		
+		# error if operator is wrong
+	else :
+		gui.textinput("ERROR :(", "Can't operate with wrong operator you can only run '+', '-', '*', '/', 'r'.")
+</textarea>
